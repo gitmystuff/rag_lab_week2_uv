@@ -139,10 +139,178 @@ In the UI:
 - Create and list Postgres documents (if Postgres is running)
 - Create and search store documents
 
-## 8) What to submit
+## 8) Create and Verify Documents in Both Databases (Required)
 
-- A screenshot of Swagger showing store endpoints working
-- A screenshot of Streamlit showing store search results
-- A short note (5–8 sentences):
-  - When would you store something in Postgres vs the document store?
-  - What fields would you add to store documents to prepare for embeddings next month?
+In this step, you will create documents in **Postgres** and **MongoDB**, verify they were saved correctly, and submit screenshots as evidence.
+
+This confirms that your API is correctly connected to both databases.
+
+---
+
+## Step 9 — Create 5 documents in Postgres
+
+Open Swagger:
+
+```
+http://localhost:8000/docs
+```
+
+Use:
+
+**POST /documents**
+
+Create **five different documents**.
+
+Example:
+
+```json
+{
+  "title": "Postgres Document 1",
+  "content": "This is stored in Postgres"
+}
+```
+
+Repeat 5 times with different titles.
+
+Example titles:
+
+* Postgres Document 1
+* Postgres Document 2
+* Postgres Document 3
+* Postgres Document 4
+* Postgres Document 5
+
+---
+
+## Step 10 — Verify Postgres documents
+
+Use:
+
+**GET /documents**
+
+Confirm you see all 5 documents.
+
+---
+
+## Step 11 — Screenshot Postgres results
+
+Take a screenshot showing:
+
+* Swagger
+* GET /documents
+* All 5 documents visible
+
+Create a Word document and name it YourName_RagLab_2
+Add this screenshot to your file.
+
+---
+
+## Step 12 — Create 5 documents in MongoDB
+
+In Swagger use:
+
+**POST /store/documents**
+
+Example:
+
+```json
+{
+  "title": "Mongo Document 1",
+  "content": "This is stored in MongoDB"
+}
+```
+
+Create 5 documents.
+
+Example titles:
+
+* Mongo Document 1
+* Mongo Document 2
+* Mongo Document 3
+* Mongo Document 4
+* Mongo Document 5
+
+---
+
+## Step 13 — Verify Mongo documents
+
+Use:
+
+**GET /store/documents**
+
+Confirm you see all 5 documents.
+
+---
+
+## Step 14 — Screenshot Mongo results
+
+Take a screenshot showing:
+
+* Swagger
+* GET /store/documents
+* All 5 Mongo documents visible
+
+Add to your Word file.
+
+---
+
+## Optional Bonus (recommended)
+
+Open MongoDB Compass and verify your collection visually.
+
+Screenshot:
+
+```
+rag_lab
+└── store_documents
+```
+
+---
+
+## Why this step matters
+
+Postgres stores relational data:
+
+• structured schema
+• fixed columns
+
+MongoDB stores document data:
+
+• flexible schema
+• JSON-like documents
+
+Your system now uses both.
+
+This architecture is common in modern AI systems.
+
+---
+
+## Submission Requirements
+
+Submit:
+
+Confirm the following is in your Word document:
+
+• Screenshot of Postgres documents
+• Screenshot of MongoDB documents
+• Updated API code
+• Updated Streamlit app
+
+Share the document with everyone at UNT with View privileges and submit shared link
+
+---
+
+# Hint: Name Documents Clearly:
+
+Postgres:
+
+```
+Postgres StudentName Doc 1
+```
+
+Mongo:
+
+```
+Mongo StudentName Doc 1
+```
+
