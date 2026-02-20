@@ -1,4 +1,4 @@
-# Student guide: Postgres + Document Store (MongoDB or TinyDB)
+# Student Guide: Postgres + Document Store (MongoDB or TinyDB)
 
 You will keep last month’s Postgres API working, and add a document store alongside it.
 
