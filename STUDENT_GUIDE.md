@@ -73,6 +73,8 @@ uv run jupyter notebook
 
 & "C:\Program Files\PostgreSQL\17\bin\psql.exe" -U postgres
 
+If you need to find what version (e.g. 17) you are using - Get-ChildItem -Path "C:\Program Files\PostgreSQL" -Recurse -Filter "psql.exe"
+
 list databases - \l
 
 Create database - CREATE DATABASE rag_lab;
