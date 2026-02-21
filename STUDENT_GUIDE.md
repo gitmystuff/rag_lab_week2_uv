@@ -117,7 +117,22 @@ STORE_BACKEND=tinydb
 
 ---
 
-# Step 3 — Run Smoke Test Notebook (Recommended)
+# Step 3 — Start FastAPI
+
+Start server:
+
+```
+uv run uvicorn app.main:app --reload
+```
+
+Open:
+
+```
+http://localhost:8000/docs
+```
+---
+
+# Step 4 — Run Smoke Test Notebook (Recommended)
 
 Install notebook:
 
@@ -153,22 +168,6 @@ Verify:
 * Delete works
 
 If MongoDB does not work, switch to TinyDB.
-
----
-
-# Step 4 — Start FastAPI
-
-Start server:
-
-```
-uv run uvicorn app.main:app --reload
-```
-
-Open:
-
-```
-http://localhost:8000/docs
-```
 
 ---
 
