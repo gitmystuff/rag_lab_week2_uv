@@ -46,36 +46,30 @@ Install dependencies:
 ```
 uv sync
 ```
+
+Run applications:
+
+FastAPI:
+
+```
+uv run uvicorn app.main:app --reload
+```
+
+Streamlit:
+
+```
+uv run streamlit run streamlit_app.py
+```
+
+Notebook (optional):
+
+```
+uv run jupyter notebook
+```
+
 ---
 
 # Step 2 — Choose Store Backend
-
-If you need to find what version (e.g. 18) you are using - Get-ChildItem -Path "C:\Program Files\PostgreSQL" -Recurse -Filter "psql.exe"
-
-& "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres
-
-list databases - \l
-
-Create database - CREATE DATABASE rag_lab;
-
-Verify - \l
-
-Use rag_lab - \c rag_lab
-
-CREATE TABLE documents (
-    id SERIAL PRIMARY KEY,
-    title TEXT NOT NULL,
-    content TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-\dt
-
-\q
-
-uv run uvicorn app.main:app –reload
-
-make sure db.py has the correct credentials
 
 Edit `.env`
 
@@ -96,7 +90,28 @@ STORE_BACKEND=tinydb
 
 ---
 
-# Step 3 — Start FastAPI
+# Step 3 — Run Smoke Test Notebook (Recommended)
+
+Open:
+
+```
+notebook/00_store_smoke_test.ipynb
+```
+
+Run all cells.
+
+Verify:
+
+* Create works
+* List works
+* Update works
+* Delete works
+
+If MongoDB does not work, switch to TinyDB.
+
+---
+
+# Step 4 — Start FastAPI
 
 Start server:
 
@@ -109,44 +124,6 @@ Open:
 ```
 http://localhost:8000/docs
 ```
----
-
-# Step 4 — Run Smoke Test Notebook (Recommended)
-
-Install notebook:
-```
-uv sync --extra notebook 
-```
-Start notebook:
-```
-uv run jupyter notebook
-```
-Open:
-
-```
-notebook/00_store_smoke_test.ipynb
-```
-
-```
-import sys
-from pathlib import Path
-
-# Add the project root (parent of the notebook folder) to Python path
-sys.path.insert(0, str(Path.cwd().parent))
-
-print("Added to path:", Path.cwd().parent)
-```
-
-Run the cells.
-
-Verify:
-
-* Create works
-* List works
-* Update works
-* Delete works
-
-If MongoDB does not work, switch to TinyDB.
 
 ---
 
@@ -238,26 +215,11 @@ Test in Swagger.
 
 # Step 9 — Update Streamlit UI
 
-Install Streamlit
+Run:
 
-Only do this if you will run the Streamlit app. Stop FastAPI and Jupyter
-```
-uv sync --extra ui
-```
-Restart FastAPI in another terminal
-```
-uv run uvicorn app.main:app --reload --port 8000
-```
-In a second terminal (leave FastAPI running):
 ```
 uv run streamlit run streamlit_app.py
 ```
-Open the URL Streamlit prints (typically):
-
-•	http://localhost:8501
-
-
----
 
 Add support for:
 
