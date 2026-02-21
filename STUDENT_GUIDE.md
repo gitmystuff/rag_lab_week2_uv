@@ -47,28 +47,6 @@ Install dependencies:
 uv sync
 ```
 
-Run applications:
-
-FastAPI:
-
-```
-uv run uvicorn app.main:app --reload
-```
-
-Streamlit:
-
-```
-uv run streamlit run streamlit_app.py
-```
-
-Notebook (optional):
-
-```
-uv run jupyter notebook
-```
-
----
-
 # Step 2 — Choose Store Backend
 
 Edit `.env`
@@ -413,3 +391,4 @@ You can:
 * Update store documents
 * Search store documents
 * View documents in Streamlit
+
