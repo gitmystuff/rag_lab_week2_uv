@@ -269,6 +269,15 @@ Restart FastAPI in another terminal
 
 uv run uvicorn app.main:app --reload --port 8000
 
+In a second terminal (leave FastAPI running):
+
+uv run streamlit run streamlit_app.py
+
+Open the URL Streamlit prints (typically):
+
+•	http://localhost:8501
+
+
 ---
 
 Add support for:
