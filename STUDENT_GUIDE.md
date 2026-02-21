@@ -132,8 +132,16 @@ Open:
 ```
 notebook/00_store_smoke_test.ipynb
 ```
+import sys</br>
+from pathlib import Path
 
-Run all cells.
+# Add the project root (parent of the notebook folder) to Python path</br>
+sys.path.insert(0, str(Path.cwd().parent))</br>
+
+print("Added to path:", Path.cwd().parent)
+
+
+Run the cells.
 
 Verify:
 
