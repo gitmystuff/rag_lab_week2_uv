@@ -71,6 +71,23 @@ uv run jupyter notebook
 
 # Step 2 — Choose Store Backend
 
+& "C:\Program Files\PostgreSQL\17\bin\psql.exe" -U postgres
+
+list databases - \l
+Create database - CREATE DATABASE rag_lab;
+Verify - \l
+Use rag_lab - \c rag_lab
+CREATE TABLE documents (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    content TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+\dt
+\q
+uv run uvicorn app.main:app –reload
+make sure db.py has the correct credentials
+
 Edit `.env`
 
 ## Option A — MongoDB (Preferred)
