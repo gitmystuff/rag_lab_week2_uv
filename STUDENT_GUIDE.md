@@ -119,6 +119,10 @@ STORE_BACKEND=tinydb
 
 # Step 3 — Run Smoke Test Notebook (Recommended)
 
+Install notebook:
+
+uv sync --extra notebook 
+
 Open:
 
 ```
