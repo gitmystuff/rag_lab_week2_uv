@@ -114,13 +114,13 @@ http://localhost:8000/docs
 # Step 4 — Run Smoke Test Notebook (Recommended)
 
 Install notebook:
-
+```
 uv sync --extra notebook 
-
+```
 Start notebook:
-
+```
 uv run jupyter notebook
-
+```
 Open:
 
 ```
