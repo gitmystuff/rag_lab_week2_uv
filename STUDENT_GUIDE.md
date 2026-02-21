@@ -123,6 +123,10 @@ Install notebook:
 
 uv sync --extra notebook 
 
+Start notebook:
+
+uv run jupyter notebook
+
 Open:
 
 ```
