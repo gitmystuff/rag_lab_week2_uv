@@ -262,17 +262,17 @@ Test in Swagger.
 Install Streamlit
 
 Only do this if you will run the Streamlit app. Stop FastAPI and Jupyter
-
+```
 uv sync --extra ui
-
+```
 Restart FastAPI in another terminal
-
+```
 uv run uvicorn app.main:app --reload --port 8000
-
+```
 In a second terminal (leave FastAPI running):
-
+```
 uv run streamlit run streamlit_app.py
-
+```
 Open the URL Streamlit prints (typically):
 
 •	http://localhost:8501
