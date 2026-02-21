@@ -259,11 +259,17 @@ Test in Swagger.
 
 # Step 9 — Update Streamlit UI
 
-Run:
+Install Streamlit
 
-```
-uv run streamlit run streamlit_app.py
-```
+Only do this if you will run the Streamlit app. Stop FastAPI and Jupyter
+
+uv sync --extra ui
+
+Restart FastAPI in another terminal
+
+uv run uvicorn app.main:app --reload --port 8000
+
+---
 
 Add support for:
 
