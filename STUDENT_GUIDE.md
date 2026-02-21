@@ -71,9 +71,9 @@ uv run jupyter notebook
 
 # Step 2 — Choose Store Backend
 
-If you need to find what version (e.g. 17) you are using - Get-ChildItem -Path "C:\Program Files\PostgreSQL" -Recurse -Filter "psql.exe"
+If you need to find what version (e.g. 18) you are using - Get-ChildItem -Path "C:\Program Files\PostgreSQL" -Recurse -Filter "psql.exe"
 
-& "C:\Program Files\PostgreSQL\17\bin\psql.exe" -U postgres
+& "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres
 
 list databases - \l
 
